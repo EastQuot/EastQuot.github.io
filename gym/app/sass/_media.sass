@@ -1,0 +1,178 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  .main-menu
+    ul li
+      padding: 0 3px
+      a
+        padding-left: 10px
+        padding-right: 10px
+    .classes a
+        padding-left: 20px
+        padding-right: 20px
+
+
+  .all-classes ul li div a
+        padding-left: 5px
+
+  .next-event-item
+    margin: 0 15px 0 8px
+    padding: 7px 0
+
+  .from-the-blog
+    padding: 10px 14px 0px 
+  
+  .partner
+    img
+      // margin: 30px 0px 18px
+      margin-right: 0
+      margin-left: 50px
+    >div:nth-child(even)
+      img
+        margin-left: 30px
+
+
+      
+  .footer .signup form
+    input[type=text] 
+      width: 230px
+    .btn
+      // padding-left: 15px
+      // padding-right: 15px
+      &:after
+        padding-left: 40px
+
+  .footer
+    .info
+      text-align: left
+  
+
+// ≥992px
++media-breakpoint-down(md)
+  .main-menu
+    display: none
+  .mobile-menu-button
+    display: block
+  .header-line
+    line-height: 60px
+
+  .second-section, .thrid-section
+	  h2
+		  margin: 25px 0 6px
+
+  .all-classes ul li div a
+      padding-left: 30px
+
+  .next-event-item
+    padding: 13px 0 9px
+    margin: 0 20px 0 8px
+
+  .from-the-blog
+    padding: 18px 14px 8px 20px 
+
+  .sixth-section, .fifth-section
+    margin: 50px 0 
+
+
+  .footer .signup form
+    input[type=text] 
+      width: 190px
+
+  .footer
+    padding: 30px 0
+    .info
+      img
+        margin-bottom: 20px
+      div
+        font-size: 14px
+
+
+// ≥768px
++media-breakpoint-down(sm)
+
+  .partner
+    img
+      margin: 30px 5px 18px
+    >div:nth-child(even)
+      img
+        margin-left: 0px
+
+  .footer
+    .info p 
+      margin: 7px 0 3px
+
+  .signup
+    h4
+      display: none
+
+  .footer-menu, .community
+    h4
+      margin: 15px 0 7px !important
+  .footer-menu h4
+    margin-top: -33px !important
+
+      
+
+// ≥576px
++media-breakpoint-down(xs)
+  .soc-line
+    text-align: center
+    .soc
+      text-align: center
+      li
+        padding-right: 5px
+
+  .all-classes ul li div a
+    padding-left: 5px 
+
+  .our-trainers
+    .like-trainers
+      margin-right: 70%
+  
+  .next-event-item
+    padding: 13px 5px 9px 5px
+
+  .footer
+    text-align: center
+    .info
+      p
+        display: none
+
+    
+  .footer-menu, .community
+    h4
+      margin: 15px 0 7px !important
+
+  .footer 
+    .signup form
+      input[type=text] 
+        margin-bottom: 10px
+      .btn:after
+        padding-left: 60px
+    .info 
+      margin: 35px 0 25px
+      text-align: center
+      div
+        justify-content: center
+
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

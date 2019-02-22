@@ -1,0 +1,690 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	background-color: #f3f3f3
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+b, strong
+	font-weight: bold
+
+
+h2
+	font-family: opensanscond, serif
+	font-weight: 200
+	font-size: 30px
+	color: #57cbf4
+	text-transform: uppercase
+	text-align: center
+	margin: 69px 0 12px
+
+i, a
+	color: #fff
+
+
+.container
+	transition: max-width .5s ease
+
+
+
+
+.soc-line
+	background-color: $accent2
+	// padding: 7px 0
+	line-height: 40px
+	.phone
+		font-size: 12px
+		.fa
+			margin: 0 6px
+	.soc
+		text-align: right
+	nav
+		ul, li
+			display: inline-block
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li
+				padding-right: 13px
+
+
+
+.header-line
+	line-height: 100px
+	background-color: $accent
+	.logo
+		margin: 0 3px
+
+.main-menu
+	position: absolute
+	right: 65px
+	display: block
+	ul,li
+		display: inline-block
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			padding: 0 1px
+			&.active a
+				border: 1px solid #fff
+				margin-right: -5px
+		a
+			border-radius: 5px
+			padding: 3px 20px 1px
+			text-decoration: none
+			font-family: opensans, serif
+			font-weight: 600
+			text-transform: uppercase
+			font-size: 13px
+			display: block
+			text-align: center
+			line-height: 39px
+			border: 1px solid transparent
+			// transition: color .15s ease, background .25s ease
+			&:active
+				border: 1px solid #fff
+				background-color: #fff
+				color: $accent
+			&:hover
+				border: 1px solid #fff
+				background-color: #fff
+				color: $accent
+				
+	.classes
+		position: relative
+		a
+			padding: 0 36px
+			&:before
+				position: absolute
+				color: #7bd3f5
+				left: 15px
+				content: "\f105"
+				font-family: fontawesome
+		&.open a:before
+			content: "\f107"
+			left: 12px
+		&.open ul
+			display: block
+		ul
+			background-color: white
+			border-radius: 5px
+			padding: 0
+			position: absolute
+			z-index: 1
+			margin: 0
+			padding: 0
+			line-height: 2.7
+			margin: 10px 0 0 5px
+			display: none
+			&:before
+				content: ""
+				border: 7px solid transparent
+				border-bottom: 7px solid white
+				position: absolute
+				top: -14px
+				left: 13px
+			li
+				white-space: nowrap
+				display: inline-block
+				border-radius: 5px
+				padding: 0 5px
+				a
+					padding-left: 23px
+					text-align: left
+					width: 190px
+					transition: all .25s ease
+					color: $accent
+					&:hover
+						color: $accent
+					&:before
+						color: #fff
+					&:hover
+						width: 200px
+						background-color: $accent
+						color: #fff
+					// &:hover	
+
+
+
+
+.mobile-menu-button
+	display: none
+	text-align: center
+	text-transform: uppercase
+
+.mobile-menu
+	display: none
+	background-color: lighten($accent, 3)
+	border-top: 1px solid lighten($accent, 5)
+	.top-menu
+		display: block
+		position: static
+		text-align: center
+
+
+
+.section-first
+	text-align: center
+	h1
+		margin-top: 105px
+		color: #505961
+		font-weight: 200
+		font-size: 38px
+	p
+		font-weight: 200
+		font-size: 16px
+		color: #8b9297
+		margin-bottom: 83px
+
+.livecontainer
+	height: 250px
+	background-color: #b7b7b7
+	border-bottom: 4px solid $accent
+	margin-bottom: 10px
+	> div
+		background-color: $accent
+		text-transform: uppercase
+		padding: 0px 19px
+		line-height: 50px
+		text-align: left
+		position: relative
+		span:first-of-type
+			font-weight: 600
+			font-size: 18px
+		span:nth-of-type(2)
+			font-size: 18px
+			font-style: italic
+		span:last-of-type
+			font-weight: bold
+			font-size: 11px
+			position: absolute
+			right: 17px
+
+
+.second-section
+	h2
+		margin: 50px 0 12px
+
+.all-classes
+	background-color: $accent
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			position: relative
+			margin: 11px 30px 18px
+			padding: 8.4px 0
+			font-size: 14px
+			text-transform: uppercase
+			border-bottom: 1px dotted #fff
+			&:before
+				content: '\f017'
+				font-family: fontawesome
+				margin-right: 9px
+			div
+				display: inline-block
+				position: absolute
+				right: 0
+				a
+					padding-left: 19px
+	>div:first-of-type ul
+		border-right: 1px dotted #fff
+
+
+.button
+	font-size: 14px
+	font-weight: 600
+	border: 1px solid #fff
+	padding: 10.5px 20px
+	border-radius: 3px
+	&:hover
+		background-color: #fff
+		color: $accent2
+		text-decoration: none
+
+.membership-prices
+	background-color: $accent2
+	text-align: center
+	padding-top: 49px
+	height: 250px
+	h3
+		font-size: 18px
+		font-weight: 400
+	p
+		font-weight: 200
+		font-size: 16px
+		line-height: 1.5
+		margin-bottom: 27px
+	
+
+
+.our-trainers
+	background-color: #fff
+	text-align: center
+	height: 250px
+	padding: 35px 0 30px	
+	line-height: 1
+	position: relative
+	.name
+		font-weight: bold
+		font-size: 14px
+		color: $accent
+		white-space: nowrap
+		text-transform: uppercase
+		margin: 8px 0 0
+	span
+		font-style: italic
+		font-size: 12px
+		color: $accent
+		text-transform: uppercase
+	p
+		font-style: italic
+		font-size: 12px
+		color: #606060
+		line-height: 1.2
+		margin-top: 10px
+		margin-bottom: 13px
+	.soc-trainers
+		display: inline-block
+		position: absolute
+		right: 38px
+		i
+			color: $accent
+	.like-trainers
+		display: inline-block
+		margin-right: 60%
+		// position: relative
+	&-item
+		border-right: 1px dotted #a9ddf1
+		margin-right: -1px
+	a i
+		color: #b8b8b8
+
+	.owl-dots
+		display: none
+	.owl-prev
+		width: 19px
+		height: 39px
+		background: url(../img/arrowsx.png) center center no-repeat !important
+		border: none
+		position: absolute
+		top: 109px
+		left: 9px
+	.owl-next
+		width: 19px
+		height: 39px
+		background: url(../img/arrowdx.png) center center no-repeat !important
+		border: none
+		position: absolute
+		top: 109px
+		right: 8px
+	.owl-prev, .owl-next
+		&:focus
+			border: none
+			outline: none
+
+.owl-carousel .owl-item img
+	display: inline-block
+	width: auto
+
+
+
+.next-event
+	background-color: #a5e5fe
+.next-event-item
+	text-align: center
+	padding: 13px 0 9px
+	margin: 0 40px 0 8px
+	border-bottom: 1px solid #d1f2fe
+	.date
+		font-size: 16px
+		font-weight: bold
+		text-transform: uppercase
+		display: block
+		margin-right: 17px
+	.placehold
+		display: inline-block
+		height: 70px
+		width: 120px
+		background-color: #b7b7b7
+	.hours
+		padding-top: 5px
+		font-size: 10px
+		font-weight: bold
+		color: #fe0000
+		margin: 0
+	h3
+		line-height: 1
+		font-size: 18px
+		color: #292929
+		text-transform: uppercase
+		margin-bottom: 3px
+		font-weight: 400
+	p
+		font-size: 12px
+		line-height: 1.1
+		color: #252525
+		margin: 0
+	.button-booking
+		font-size: 10px
+		font-weight: 600
+		color: #ff0000
+		text-transform: uppercase
+		border: 1px solid #3f4c51
+		padding: 1.5px 19px
+		text-decoration: none
+		&:hover
+			color: black
+
+
+
+.from-the-blog
+	background-color: #d4d6d6
+	padding: 12px 20px 4px 
+	img
+		float: left
+		vertical-align: top
+		margin-bottom: 8px
+		margin-right: 14px
+	p
+		font-size: 13px
+		margin: 0
+	.date
+		font-size: 13px
+		color: black
+		display: block
+		&:after
+			content: ''
+			display: block
+			clear: both
+
+
+
+.gallery
+	.owl-dots
+		display: none
+	.owl-prev
+		width: 61px
+		height: 58px
+		background: url(../img/arrowsx.png) #fff 17px center no-repeat !important
+		border: 1px solid transparent
+		border-radius: 10em
+		position: absolute
+		top: 44%
+		left: 10px
+		opacity: .8
+	.owl-next
+		width: 61px
+		height: 58px
+		background: url(../img/arrowdx.png) #fff center center no-repeat !important
+		border: 1px solid transparent
+		border-radius: 10em
+		position: absolute
+		top: 44%
+		right: 10px
+		opacity: .8
+	.owl-prev, .owl-next
+		&:focus
+			border: none
+			outline: none
+
+
+
+.partner
+	>div
+		text-align: right
+	>div:nth-child(even)
+		text-align: left
+	img
+		margin: 30px 15px 18px
+
+
+
+
+
+.fifth-section
+	margin-top: 115px
+	.map
+		width: 100%
+		background: url('../img/maps.png')
+		background-position: center center
+		background-size: cover
+
+	.opening-hourse
+		opacity: .9
+		text-align: center
+		background-color: $accent
+		padding: 15px 21px 23px 29px
+		h3
+			font-family: opensanscond, serif
+			font-size: 30px
+			font-weight: 200
+			margin: 0
+			span
+				font-family: opensans, serif
+				font-weight: 600
+				font-size: 30px
+				font-style: normal
+		ul 
+			padding: 0
+			margin: 0
+			list-style-type: none
+			text-align: left
+			position: relative
+			li
+				font-weight: 600
+				font-size: 14px
+				border-bottom: 1px dotted #fff
+				padding: 11px 2px 6px
+				&:before
+					content: '\f133'
+					font-family: fontawesome
+					font-weight: normal
+					padding-right: 12px
+				span
+					font-size: 14px
+					position: absolute
+					font-style: normal
+					right: 0
+
+		p
+			font-size: 16px
+			line-height: 1.3
+			margin: 27px 0 3px
+		span
+			font-style: italic
+			font-size: 30px
+			text-align: center
+
+.sixth-section
+	margin: 118px 0 107px
+	h3
+		font-size: 14px
+		font-weight: normal
+		color: $accent2
+		margin: 0 25px
+		span
+			color: #0056a4
+	i
+		color: $accent
+		font-size: 70px
+		vertical-align: middle
+		margin-right: 25px
+
+
+
+.footer
+	background-color: $accent
+	padding: 47px 0
+	.signup
+		text-transform: uppercase
+		h4
+			font-size: 18px
+			font-weight: normal
+			margin-bottom: 16px
+		p
+			font-weight: 600
+			font-size: 14px
+			line-height: 1.3
+			margin-bottom: 14px
+		form
+			input[type=text]
+				text-transform: uppercase
+				color: #00afec
+				font-size: 12px
+				background-color: #b9e8fa
+				border: 1px solid #b9e8fa
+				padding: 8px 23px 7px
+				width: 337px
+				// display: block
+				margin-bottom: 18px
+				&::-moz-input-placeholder
+					color: #00afec
+				&::-webkit-input-placeholder
+					color: #00afec
+				&::-ms-input-placeholder
+					color: #00afec
+			.btn
+				font-size: 12px
+				background-color: #e25050
+				outline: none
+				border: none
+				text-transform: uppercase
+				color: #fff
+				text-align: left
+				padding: 6px 22px 5px
+				&:after
+					content: '\f105'
+					font-family: fontawesome
+					font-size: 15px
+					padding-left: 81px
+
+	.info
+		text-align: center
+		img
+			margin-bottom: 19px
+		p
+			margin: 0 0 23px 0
+			line-height: 1.8
+			font-size: 13px
+			text-align-last: left
+		div 
+			display: flex
+			align-items: center
+			font-size: 20px
+			font-weight: 600
+			font-style: italic
+			span
+				font-size: 13px
+				margin-right: 20px
+
+	.footer-menu , .community
+		display: flex
+		flex-direction: column
+		align-items: center
+		h4
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: normal
+			margin-bottom: 15px
+			&:hover
+				cursor: pointer
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				font-size: 13px
+				&:before
+					content: "\f105"
+					font-family: fontawesome
+					font-size: 15px
+					padding-right: 10px
+				a:hover
+					color: #fff
+	.footer-menu
+		h4
+			margin-right: 30px
+
+.copyright
+	font-size: 12px
+	i
+		margin-right: 4px
+		
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity = $opacity)
+
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 5
+	background-color: $accent
+	opacity: .9
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin-left: -40px
+		margin-top: -40px
+		&:before, &::after
+			content: ''
+			border: 5px solid $accent2
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&:before
+			animation: pulse-outer .7s ease-in infinite
+		&:after
+			animation: pulse-inner .7s linear infinite
+
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	0%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+
+
+
+
+
+
+@import "media" // Always at the end
