@@ -90,6 +90,10 @@ i, a
 			&.active a
 				border: 1px solid #fff
 				margin-right: -5px
+			&:hover a
+				border: 1px solid #fff
+				background-color: #fff
+				color: $accent
 		a
 			border-radius: 5px
 			padding: 3px 20px 1px
@@ -103,34 +107,25 @@ i, a
 			line-height: 39px
 			border: 1px solid transparent
 			// transition: color .15s ease, background .25s ease
-			&:active
-				border: 1px solid #fff
-				background-color: #fff
-				color: $accent
-			&:hover
-				border: 1px solid #fff
-				background-color: #fff
-				color: $accent
+
 				
 	.classes
 		position: relative
+		padding-bottom: 30px
+		&:hover 
+			>ul
+				display: block
 		a
 			padding: 0 36px
 			&:before
 				position: absolute
 				color: #7bd3f5
-				left: 15px
-				content: "\f105"
+				left: 12px
+				content: "\f107"
 				font-family: fontawesome
-		&.open a:before
-			content: "\f107"
-			left: 12px
-		&.open ul
-			display: block
-		ul
+		>ul
 			background-color: white
 			border-radius: 5px
-			padding: 0
 			position: absolute
 			z-index: 1
 			margin: 0
@@ -145,26 +140,56 @@ i, a
 				position: absolute
 				top: -14px
 				left: 13px
-			li
+			>li
 				white-space: nowrap
 				display: inline-block
 				border-radius: 5px
 				padding: 0 5px
-				a
+				position: relative
+				&:hover 
+					ul
+						display: block
+				ul
+					display: none
+					// padding-left: 30px
+					position: absolute
+					left: 100%
+					top: 5px
+					li
+						border-radius: 5px 
+						color: #7bd3f5 
+						display: block
+						background-color: #fff
+						&:hover
+							a
+								background-color: #7bd3f5 !important
+								color: #fff !important
+						a
+							background-color: #fff !important
+							color: #7bd3f5 !important
+							font-size: 11px
+							padding: 0 45px
+							&:before
+								display: none
+				>a
 					padding-left: 23px
-					text-align: left
+					// padding-right: 60px
 					width: 190px
+					text-align: left
 					transition: all .25s ease
 					color: $accent
-					&:hover
-						color: $accent
 					&:before
-						color: #fff
-					&:hover
-						width: 200px
-						background-color: $accent
-						color: #fff
-					// &:hover	
+						color: #7bd3f5
+						left: 12px
+						content: "\f105"
+				&:hover a
+					color: $accent
+					background-color: $accent
+					color: #fff	
+				&:hover a:before
+					color: #fff
+					content: '\f107'
+
 
 
 
