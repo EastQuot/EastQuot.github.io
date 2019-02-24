@@ -51,7 +51,6 @@ i, a
 
 .soc-line
 	background-color: $accent2
-	// padding: 7px 0
 	line-height: 40px
 	.phone
 		font-size: 12px
@@ -76,45 +75,47 @@ i, a
 	.logo
 		margin: 0 3px
 
+
+
 .main-menu
 	position: absolute
 	right: 65px
-	display: block
-	ul,li
-		display: inline-block
+	ul
 		list-style-type: none
 		padding: 0
 		margin: 0
 		li
-			padding: 0 1px
+			display: inline-block
+			padding: 27px 0
+			// font-size: 0.8125em
 			&.active a
 				border: 1px solid #fff
-				margin-right: -5px
 			&:hover a
 				border: 1px solid #fff
 				background-color: #fff
 				color: $accent
+			ul
+				display: none
 		a
 			border-radius: 5px
 			padding: 3px 20px 1px
 			text-decoration: none
 			font-family: opensans, serif
 			font-weight: 600
-			text-transform: uppercase
 			font-size: 13px
+			text-transform: uppercase
+
 			display: block
 			text-align: center
 			line-height: 39px
 			border: 1px solid transparent
 			// transition: color .15s ease, background .25s ease
 
-				
+
 	.classes
 		position: relative
-		padding-bottom: 30px
-		&:hover 
-			>ul
-				display: block
+		>ul
+			background-color: #fff
 		a
 			padding: 0 36px
 			&:before
@@ -123,72 +124,154 @@ i, a
 				left: 12px
 				content: "\f107"
 				font-family: fontawesome
-		>ul
-			background-color: white
-			border-radius: 5px
+		ul
 			position: absolute
+			border: 2.5px solid transparent
+			border-radius: 5px
+			line-height: 1
 			z-index: 1
-			margin: 0
-			padding: 0
-			line-height: 2.7
-			margin: 10px 0 0 5px
-			display: none
-			&:before
-				content: ""
-				border: 7px solid transparent
-				border-bottom: 7px solid white
-				position: absolute
-				top: -14px
-				left: 13px
-			>li
+			margin-top: 10px
+			li
+				width: 90%
+				transition: all .5s ease
+			li
+				padding: 0
 				white-space: nowrap
-				display: inline-block
-				border-radius: 5px
-				padding: 0 5px
 				position: relative
-				&:hover 
-					ul
-						display: block
+				&:hover a:before
+					content: '\f107'
+					color: #fff
+				a:before
+					content: "\f105"
+				a
+					padding: 0 35px
+					text-align: left
+					transition: all .2s ease
+				&:hover a
+					color: #fff
+					background-color: $accent
+				&:hover
+					width: 100%
 				ul
-					display: none
-					// padding-left: 30px
-					position: absolute
-					left: 100%
-					top: 5px
+					// opacity: 0
+					display: block
+					transition: top .2s ease,left .2s ease, transform .3s ease
+					border-left: 5px solid transparent
+					left: 500%
+					top: 500%
+					transform: skew(20deg, 10deg)
 					li
-						border-radius: 5px 
-						color: #7bd3f5 
+						width: 95%
 						display: block
-						background-color: #fff
-						&:hover
-							a
-								background-color: #7bd3f5 !important
-								color: #fff !important
+						&:hover a
+							color: #fff !important
+							background-color: #72d0f4 !important
 						a
 							background-color: #fff !important
 							color: #7bd3f5 !important
-							font-size: 11px
-							padding: 0 45px
 							&:before
 								display: none
-				>a
-					padding-left: 23px
-					// padding-right: 60px
-					width: 190px
-					text-align: left
-					transition: all .25s ease
-					color: $accent
-					&:before
-						color: #7bd3f5
-						left: 12px
-						content: "\f105"
-				&:hover a
-					color: $accent
-					background-color: $accent
-					color: #fff	
-				&:hover a:before
-					color: #fff
-					content: '\f107'
+						ul li a
+							border-radius: 10em
+							border: 3px solid #fff
+				&:hover > ul
+					transform: skew(0deg, 0deg)
+					// opacity: 1
+					left: 100%
+					top: 0
+					
+		&:hover>ul
+			display: block
+
+
+
+
+
+
+
+
+
+	// .classes
+	// 	position: relative
+	// 	padding-bottom: 30px
+	// 	&:hover 
+	// 		>ul
+	// 			display: block
+	// 	a
+	// 		padding: 0 36px
+	// 		&:before
+	// 			position: absolute
+	// 			color: #7bd3f5
+	// 			left: 12px
+	// 			content: "\f107"
+	// 			font-family: fontawesome
+	// 	>ul
+	// 		background-color: white
+	// 		border-radius: 5px
+	// 		position: absolute
+	// 		z-index: 1
+	// 		margin: 0
+	// 		padding: 0
+	// 		line-height: 2.7
+	// 		margin: 10px 0 0 5px
+	// 		display: none
+	// 		&:before
+	// 			content: ""
+	// 			border: 7px solid transparent
+	// 			border-bottom: 7px solid white
+	// 			position: absolute
+	// 			top: -14px
+	// 			left: 13px
+	// 		>li
+	// 			white-space: nowrap
+	// 			display: inline-block
+	// 			border-radius: 5px
+	// 			padding: 0 5px
+	// 			position: relative
+	// 			width: 100%
+	// 			&:hover 
+	// 				ul
+	// 					display: block
+	// 			ul
+	// 				display: none
+	// 				// padding-left: 30px
+	// 				position: absolute
+	// 				border-left: 15px solid transparent
+	// 				left: 100%
+	// 				top: 5px
+	// 				li
+	// 					border-radius: 5px 
+	// 					color: #7bd3f5 
+	// 					display: block
+	// 					background-color: #fff
+	// 					&:hover
+	// 						a
+	// 							background-color: #7bd3f5 !important
+	// 							color: #fff !important
+	// 					a
+	// 						background-color: #fff !important
+	// 						color: #7bd3f5 !important
+	// 						font-size: 11px
+	// 						padding: 0 45px
+	// 						&:before
+	// 							display: none
+	// 			>a
+	// 				// padding-left: 23px
+	// 				// padding-right: 60px
+	// 				text-align: left
+	// 				transition: all .25s ease
+	// 				color: $accent
+	// 				&:before
+	// 					color: #7bd3f5
+	// 					left: 12px
+	// 					content: "\f105"
+	// 			&:hover a
+	// 				color: $accent
+	// 				background-color: $accent
+	// 				color: #fff	
+	// 			&:hover a:before
+	// 				color: #fff
+	// 				content: '\f107'
 
 
 
