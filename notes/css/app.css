@@ -1,0 +1,225 @@
+@import 'font-awesome.css';
+
+ body {
+    background-color: #fafafa;
+    color: #757575;
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow-y:hidden;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'SF UI Text';
+    font-size: 24px;
+    color: #323330;
+    margin: 1rem auto;
+    background: linear-gradient(to top, #FFCF11, #FFDD58);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 15px;
+}
+
+
+button {
+    background: none;
+    border: none;
+    border-radius: 2px;
+    color: #757575;
+    padding: 0 15px;
+    display: inline-block;
+    font-family: "Consolas",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    outline: none
+}
+
+button:hover {
+    background-color: rgba(158,158,158,.2);
+}
+
+button:active {
+    background-color: rgba(158,158,158,.4);
+}
+
+
+input, textarea {
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #757575;
+    padding: .3em;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+main {
+    background-image: url('bgc.png');
+    width: 600px;
+    margin: 70px auto;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+
+#form {
+    display: flex;
+    align-content: center;
+    background-color: #FAFAFA;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: .4em;
+    background-image: url('bgc.png');
+}
+
+input {
+    width: 50px;
+    outline: none;
+    transition: all .2s;
+    height: 15px;
+}
+
+textarea{
+    flex-grow:1;
+    padding: 0 .2em;
+    resize: none;
+    overflow: auto;
+    margin: 0 10px;
+    height: 25px;
+}
+
+
+#form textarea:focus{
+    border: 1px solid #f0db4f;
+}
+
+#form input:focus {
+    border: 1px solid #f0db4f;
+}
+
+
+
+
+.item {
+    font-size: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background-color: #fff;
+    transition: all .2s;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: .6em;
+    align-items: center;
+    background-image: url('bgc.png');
+    display: flex;
+}
+
+.item .editTitle, .item .note {
+    margin-right: auto;
+}
+
+.item .title{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.item .note{
+    padding-left: 20px;
+}
+
+.item.editing .title , .item.editing .note{
+    display: none;
+}
+
+.item .editTitle {
+    display: none;
+}
+
+.item textarea{
+    padding: 0;
+    font-size: .8em;
+    display: none;
+}
+
+.item.editing .editTitle , .item.editing textarea{
+    display: block;
+}
+
+.item button {
+    opacity: 0;
+    transition: all .2s;
+}
+
+.item:hover button, .item:hover .date {
+    opacity: 1;
+}
+
+.editButton , .deleteButton{
+    padding: .8em  1.1em;
+}
+
+.editButton:hover, .deleteButton:hover{
+    color: #FFCF11
+}
+
+.item .date{
+    font-size: .7em;
+    opacity: 0;
+    margin-right: 10px;
+}
+
+
+
+.pagination {
+    position: absolute;
+    top: 70px;
+    left: 100%;
+    z-index: 1;
+    margin-left: 10px;
+}
+.pagination > li {
+  display: inline-block;
+  margin-bottom:7px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 6px 13px;
+  text-align: center;
+  color: #000;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #ddd inset, 0 1px 1px #fff;
+
+  
+}
+.active {
+    color: #FFCF11;
+    border: 1px solid #FFCF11;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
